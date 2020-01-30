@@ -26,8 +26,14 @@ const AboutSegment = () => {
               padding: '15px'
             }}
           >
-            <Header icon>
-              40 Years Of Smiles
+            <Header style={{ paddingTop: '15px' }}>
+              <span
+                style={{
+                  textTransform: 'uppercase'
+                }}
+              >
+                40 Years Of Smiles
+              </span>
               <Header.Subheader>
                 Pine Street Dental has been providing general dentistry to the
                 family and friends of Spartanburg and the Upstate for over 40
@@ -48,8 +54,20 @@ const AboutSegment = () => {
               Our Services
             </Button>
           </Grid.Column>
+          <Grid.Column width={2} />
 
-          <Grid.Column width={10} />
+          <Grid.Column width={8}>
+            <blockquote cite="https://www.google.com/maps/contrib/116929363328710895849/reviews/@34.9462678,-81.9152215,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1">
+              <p style={{ color: 'white', fontSize: '1.5em' }}>
+                {' '}
+                "Dr. Figueroa is impressive in his professional and personal
+                approach to his patients and his entire staff is Top Notch!"
+              </p>
+              <footer style={{ color: '#dedede' }}>
+                <cite>~ Aldous Huxley</cite>
+              </footer>
+            </blockquote>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>

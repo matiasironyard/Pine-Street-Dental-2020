@@ -25,6 +25,9 @@ const StaffBanner = () => {
         <Image
           src={item.img}
           size="small"
+          alt={`${item.name} ${
+            item.position
+          } at pine street dental spartanburg 864 582 5000 364 S Pine St suite a-101, Spartanburg, SC 29302`}
           circular
           style={{
             margin: '0px auto',

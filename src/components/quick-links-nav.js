@@ -16,7 +16,7 @@ const QuickLinksNav = () => {
       >
         <img
           src={LogoImage}
-          alt="pine street dental logo"
+          alt="pine street dental spartanburg 864 582 5000 364 S Pine St suite a-101, Spartanburg, SC 29302"
           style={{ width: '280px' }}
         />
       </Menu.Item>

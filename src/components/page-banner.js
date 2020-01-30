@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Header, Segment } from 'semantic-ui-react';
+import { Button, Grid, Header, Segment, Message } from 'semantic-ui-react';
 import HoursOfOperation from './hours-of-operation';
 import OfficeExterior from '../images/officeExterior.jpg';
 
@@ -31,15 +31,22 @@ const PageBanner = () => {
             <Header icon style={{ textTransform: 'uppercase' }}>
               Schedule An Appointment
             </Header>
-            <HoursOfOperation />
-            <Button
-              primary
-              as="a"
-              href="tel:864-582-500"
-              style={{ marging: '25px auto !important' }}
-            >
-              864.582.5000
-            </Button>
+            <div style={{ paddingBottom: '20px' }}>
+              <HoursOfOperation />
+            </div>
+            <div style={{ paddingBottom: '20px' }}>
+              <Button
+                primary
+                as="a"
+                href="tel:864-582-500"
+                style={{ marging: '25px auto !important' }}
+              >
+                864.582.5000
+              </Button>
+            </div>
+            <Message style={{ textTransform: 'uppercase' }}>
+              Hablamos español, llamenos hoy!
+            </Message>
           </Grid.Column>
         </Grid.Row>
       </Grid>
