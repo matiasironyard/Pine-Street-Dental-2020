@@ -3,9 +3,10 @@ import { Menu, Icon } from 'semantic-ui-react';
 import LogoImage from '../../src/images/logo.png';
 
 const QuickLinksNav = () => {
-  const [activeItem, setActiveItem] = useState('home');
+  const [activeItem, setActiveItem] = useState('');
   const handleItemClick = (e, { name }) => {
     setActiveItem(name);
+    window.location = `#${name}`;
   };
   return (
     <Menu secondary>
@@ -21,10 +22,18 @@ const QuickLinksNav = () => {
         />
       </Menu.Item>
       <Menu.Menu position="right">
-        <Menu.Item active={activeItem === 'call us'} onClick={handleItemClick}>
+        <Menu.Item
+          active={activeItem === 'call us'}
+          as="a"
+          href="tel:18645825000"
+        >
           <Icon name="phone" size="large" color="blue" />
         </Menu.Item>
-        <Menu.Item active={activeItem === 'Find Us'} onClick={handleItemClick}>
+        <Menu.Item
+          name="location"
+          active={activeItem === 'Find Us'}
+          onClick={handleItemClick}
+        >
           <Icon name="map marker alternate" size="large" color="blue" />
         </Menu.Item>
       </Menu.Menu>
