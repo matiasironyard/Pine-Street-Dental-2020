@@ -5,6 +5,7 @@ const Nav = props => {
   const [activeItem, setActiveItem] = useState('about');
   const handleItemClick = (e, { name }) => {
     setActiveItem(name);
+    window.location = `#${name}`;
   };
   return (
     <Menu
