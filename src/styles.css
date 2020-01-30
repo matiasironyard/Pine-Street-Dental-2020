@@ -1,7 +1,11 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+	font-family: sans-serif;
+	text-align: center;
 }
 .segment {
-  border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+#main-container-fluid,
+#testimonials {
+	margin: 0 !important;
 }
