@@ -3,7 +3,7 @@ import { Grid, Header, Segment, Table, Button } from 'semantic-ui-react';
 //  Loading message component
 const ServicesBanner = () => {
 	const backgroundImage =
-		'https://thumbs.dreamstime.com/b/dentist-office-vector-illustrations-flat-background-illustration-colorful-template-you-design-web-mobile-applications-87590115.jpg';
+		'https://previews.123rf.com/images/9dreamstudio/9dreamstudio1802/9dreamstudio180202215/95506478-metal-dentist-tools-blue-background-top-view-.jpg';
 	return (
 		<Segment
 			id="services"
@@ -13,6 +13,8 @@ const ServicesBanner = () => {
 				margin: '0',
 				backgroundColor: '#fff',
 				backgroundImage: `url(${backgroundImage})`,
+				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat',
 			}}>
 			<Grid centered stackable>
 				<Grid.Row>

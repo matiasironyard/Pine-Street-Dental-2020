@@ -13,6 +13,8 @@ import {
 } from 'semantic-ui-react';
 //  Loading message component
 const TestimonialsBanner = () => {
+	const backgroundImage =
+		'https://pantherpediatricdentistry.com/wp-content/uploads/2018/11/background-hero.jpg';
 	const [data, setData] = useState(null);
 	useEffect(() => {
 		const url = 'https://yelp-proxy-server.herokuapp.com/pinestreetdentalsc';
@@ -55,6 +57,9 @@ const TestimonialsBanner = () => {
 				padding: '60px',
 				minHeight: '400px',
 				backgroundColor: '#2185d0',
+				backgroundImage: `url(${backgroundImage})`,
+				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat',
 			}}>
 			<Container>
 				<Segment
