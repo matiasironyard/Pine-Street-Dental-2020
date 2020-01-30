@@ -5,6 +5,7 @@
 .segment {
 	border-radius: 0 !important;
 }
-#main-container-fluid {
+#main-container-fluid,
+#testimonials {
 	margin: 0 !important;
 }

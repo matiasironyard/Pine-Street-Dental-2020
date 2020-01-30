@@ -5,7 +5,7 @@ import QuickLinksNav from './quick-links-nav';
 const PageHeader = () => {
 	return (
 		<Grid>
-			<Grid.Row style={{ padding: '30px 0px 0 30px' }}>
+			<Grid.Row style={{ padding: '30px 5px 0 30px' }}>
 				<Grid.Column width={16}>
 					<QuickLinksNav />
 				</Grid.Column>
