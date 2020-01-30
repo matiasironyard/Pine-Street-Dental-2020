@@ -61,14 +61,14 @@ const TestimonialsBanner = () => {
               {data != null && data.length > 0 ? (
                 <Card.Group stackable itemsPerRow={3}>
                   {items}
-                  <Card>
+                  <Card style={{ backgroundColor: '#00b5ad' }}>
                     <Card.Content
                       style={{ textAlign: 'center', padding: '60px 0 30px 0' }}
                     >
-                      <Card.Header>
+                      <Card.Header style={{ paddingBottom: '20px' }}>
                         Call us today and schedule an appointment!
                       </Card.Header>
-                      <Card.Description>
+                      <Card.Description style={{ paddingBottom: '20px' }}>
                         <Button
                           primary
                           as="a"

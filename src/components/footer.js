@@ -17,6 +17,7 @@ const Footer = () => (
               <List.Item>Extractions</List.Item>
               <List.Item>Pediatric Dentistry</List.Item>
               <List.Item>Call for more services</List.Item>
+              <List.Item>Se habla español, llamenos hoy!</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column>
