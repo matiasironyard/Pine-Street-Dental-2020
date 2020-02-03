@@ -7,21 +7,30 @@ const AboutSegment = () => {
 	return (
 		<div
 			style={{
-				padding: '30px',
 				minHeight: '450px',
 				backgroundImage: `url(${backgroundImage})`,
 				backgroundSize: 'cover',
 				backgroundPosition: 'bottom',
 			}}>
-			<Container>
+			<Container style={{ padding: '5% 0' }}>
 				<Segment
 					id="about"
 					placeholder
 					style={{
 						backgroundColor: 'rgba(255,255,255,.80)',
 						minHeight: '400px',
+						padding: '50px 0',
 					}}>
-					<Grid columns={2} stackable textAlign="center">
+					<Header
+						as="h1"
+						style={{
+							textAlign: 'center',
+							textTransform: 'uppercase',
+							color: 'rgb(33, 133, 208)',
+						}}>
+						40 Years Of Smiles
+					</Header>
+					<Grid container columns={2} stackable textAlign="center">
 						<Grid.Row verticalAlign="middle">
 							<Grid.Column
 								width={6}
@@ -29,12 +38,13 @@ const AboutSegment = () => {
 									minHeight: '80px',
 									padding: '15px',
 								}}>
-								<Header as="h1" style={{ paddingTop: '15px' }}>
+								<Header as="h2" style={{ paddingTop: '15px' }}>
 									<span
 										style={{
 											textTransform: 'uppercase',
+											color: '#666',
 										}}>
-										40 Years Of Smiles
+										Trusted Experience
 									</span>
 									<Header.Subheader>
 										Pine Street Dental has been providing general dentistry to

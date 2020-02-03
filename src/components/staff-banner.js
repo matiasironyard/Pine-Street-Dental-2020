@@ -51,7 +51,15 @@ const StaffBanner = () => {
 					<Card.Content>
 						<Card.Header>{item.name}</Card.Header>
 						<Card.Meta>
-							<span className="date">{item.position}</span>
+							<span
+								className="date"
+								style={{
+									fontWeight: 'bold',
+									color: '#666',
+									textTransform: 'uppercase',
+								}}>
+								{item.position}
+							</span>
 							<Accordion>
 								<Accordion.Title
 									active={activeIndex === index}
@@ -81,7 +89,7 @@ const StaffBanner = () => {
 				minHeight: '300px',
 				backgroundColor: 'white',
 			}}>
-			<Grid stackable textAlign="center">
+			<Grid container stackable textAlign="center">
 				<Grid.Row>
 					<Grid.Column columns={4} width={16}>
 						<Header

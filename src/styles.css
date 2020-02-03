@@ -12,3 +12,14 @@
 #testimonials .card {
 	background-color: rgba(255, 255, 255, 0.8);
 }
+
+h1.ui.header {
+	font-size: 3em !important;
+}
+h2.ui.header span {
+	font-size: 1.5em !important;
+}
+
+.button {
+	border-radius: 0 !important;
+}

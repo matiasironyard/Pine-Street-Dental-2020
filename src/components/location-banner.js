@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Button } from 'semantic-ui-react';
+import { Grid, Segment, Button, Header } from 'semantic-ui-react';
 import HoursOfOperation from './hours-of-operation';
 //  Loading message component
 const LocationBanner = () => {
@@ -23,6 +23,15 @@ const LocationBanner = () => {
 						/>
 					</Grid.Column>
 					<Grid.Column width={6}>
+						<Header
+							as="h3"
+							style={{
+								textAlign: 'left',
+								textTransform: 'uppercase',
+								color: '#2185d0',
+							}}>
+							Hours & Location
+						</Header>
 						<HoursOfOperation />
 						<Button
 							primary

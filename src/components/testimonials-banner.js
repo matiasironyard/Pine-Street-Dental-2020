@@ -11,10 +11,13 @@ import {
 	Header,
 	Container,
 } from 'semantic-ui-react';
+import StaffData from '../data/staff.js';
+
 //  Loading message component
 const TestimonialsBanner = () => {
 	const backgroundImage =
 		'https://pantherpediatricdentistry.com/wp-content/uploads/2018/11/background-hero.jpg';
+	const officeManager = StaffData()[0];
 	const [data, setData] = useState(null);
 	useEffect(() => {
 		const url = 'https://yelp-proxy-server.herokuapp.com/pinestreetdentalsc';
@@ -27,14 +30,26 @@ const TestimonialsBanner = () => {
 	let items;
 	if (data != null && data.length > 0) {
 		items = data.map(item => {
+			let name = item.author_name;
+			let firstName = name.substr(0, name.indexOf(' '));
+
 			return (
-				<Card key={item.time} fluid as="a" href={item.author_url}>
-					<Card.Content style={{ textAlign: 'center' }}>
+				<Card
+					key={item.time}
+					fluid
+					as="a"
+					href={item.author_url}
+					style={{ borderRadius: '0' }}>
+					<Card.Content
+						style={{
+							textAlign: 'center',
+							padding: '60px 20px',
+						}}>
 						<Image
 							src={item.profile_photo_url}
-							style={{ height: '70px', width: '70px' }}
+							style={{ height: '100px', width: '100px' }}
 						/>
-						<Card.Header>{item.author_name}</Card.Header>
+						<Card.Header>{firstName}</Card.Header>
 						<Card.Description>{item.text}</Card.Description>
 						<Card.Meta>{item.relative_time_description}</Card.Meta>
 					</Card.Content>
@@ -48,38 +63,58 @@ const TestimonialsBanner = () => {
 	}
 
 	return (
-		<Container
-			fluid
+		<div
 			id="testimonials"
 			placeholder
 			style={{
 				margin: '0',
-				padding: '60px',
 				minHeight: '400px',
 				backgroundColor: '#2185d0',
 				backgroundImage: `url(${backgroundImage})`,
 				backgroundSize: 'cover',
 				backgroundRepeat: 'no-repeat',
 			}}>
-			<Container>
+			<Container style={{ padding: '5% 0' }}>
 				<Segment
 					placeholder
-					style={{ backgroundColor: 'rgba(255,255,255,.25)' }}>
-					<Grid stackable>
+					style={{
+						padding: '30px 15px',
+						backgroundColor: 'rgba(255,255,255,.8)',
+					}}>
+					<Grid container stackable>
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<div>
 									{data != null && data.length > 0 ? (
 										<Card.Group stackable itemsPerRow={3}>
 											{items}
-											<Card style={{ backgroundColor: '#00b5ad' }}>
+											<Card
+												style={{
+													borderRadius: '0',
+													boxShadow: '0px 0px 5px 2px #bababc',
+												}}>
 												<Card.Content
 													style={{
 														textAlign: 'center',
-														padding: '60px 0 30px 0',
+														padding: '60px 20px',
 													}}>
+													<Image
+														src={officeManager.img}
+														size="small"
+														alt={`${officeManager.name} ${
+															officeManager.position
+														} at pine street dental spartanburg 864 582 5000 364 S Pine St suite a-101, Spartanburg, SC 29302`}
+														circular
+														style={{
+															margin: '0px auto',
+															width: '100px',
+															borderRadius: '100%',
+															height: '100px',
+															objectFit: 'cover',
+														}}
+													/>
 													<Card.Header style={{ paddingBottom: '20px' }}>
-														Call us today and schedule an appointment!
+														Call Kathey today and schedule your appointment!
 													</Card.Header>
 													<Card.Description style={{ paddingBottom: '20px' }}>
 														<Button
@@ -111,7 +146,7 @@ const TestimonialsBanner = () => {
 					</Grid>
 				</Segment>
 			</Container>
-		</Container>
+		</div>
 	);
 };
 
