@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Seo from './components/seo';
 //  Import locals
 import Nav from './components/navigation';
 import Footer from './components/footer';
@@ -58,6 +59,7 @@ const Wrapper = props => {
 			fluid
 			style={{ margin: '0 !important' }}
 			id="main-container-fluid">
+			<Seo />
 			<PageHeader />
 			<Nav />
 			{props.children}
